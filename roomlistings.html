@@ -41,7 +41,7 @@
           <!-- <img src="https://source.unsplash.com/400x250/?room" alt="Room Image" class="w-full h-48 object-cover" /> -->
           <!-- Carousel for Room Card -->
             <div class="relative">
-                <img id="room1-img" src="room1.jpg" alt="Room Image" class="w-full h-48 object-cover rounded-t-2xl" />
+                <img id="room1-img" src="assets/room1.jpg" alt="Room Image" class="w-full h-48 object-cover rounded-t-2xl" />
                 <button onclick="prevImage('room1')"
                     class="absolute left-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow hover:bg-opacity-100">
                     <i class="fas fa-chevron-left text-indigo-600"></i>
@@ -64,7 +64,7 @@
         <!-- Another Room Card -->
         <div class="bg-white rounded-2xl shadow-md overflow-hidden">
             <div class="relative">
-                <img id="room2-img" src="room5.jpg" alt="Room Image" class="w-full h-48 object-cover rounded-t-2xl" />
+                <img id="room2-img" src="assets/room5.jpg" alt="Room Image" class="w-full h-48 object-cover rounded-t-2xl" />
                 <button onclick="prevImage('room2')"
                 class="absolute left-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow hover:bg-opacity-100">
                 <i class="fas fa-chevron-left text-indigo-600"></i>
@@ -87,7 +87,7 @@
         <!-- Another Room Card -->
          <div class="bg-white rounded-2xl shadow-md overflow-hidden">
             <div class="relative">
-                <img id="room3-img" src="room9.jpg" alt="Room Image" class="w-full h-48 object-cover rounded-t-2xl" />
+                <img id="room3-img" src="assets/room9.jpg" alt="Room Image" class="w-full h-48 object-cover rounded-t-2xl" />
                 <button onclick="prevImage('room3')"
                 class="absolute left-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow hover:bg-opacity-100">
                 <i class="fas fa-chevron-left text-indigo-600"></i>
@@ -121,22 +121,22 @@
 // Carousel images for each room
 const roomImages = {
   room1: [
-    "room1.jpg",
-    "room2.jpg",
-    "room3.jpg",
-    "room4.jpg",
+    "assets/room1.jpg",
+    "assets/room2.jpg",
+    "assets/room3.jpg",
+    "assets/room4.jpg",
   ],
   room2: [
-    "room5.jpg",
-    "room6.jpg",
-    "room7.jpg",
-    "room8.jpg",
+    "assets/room5.jpg",
+    "assets/room6.jpg",
+    "assets/room7.jpg",
+    "assets/room8.jpg",
   ],
   room3: [
-    "room9.jpg",
-    "room10.jpg",
-    "room11.jpg",
-    "room12.jpg",
+    "assets/room9.jpg",
+    "assets/room10.jpg",
+    "assets/room11.jpg",
+    "assets/room12.jpg",
 ],
 };
 const roomIndexes = { room1: 0, room2: 0, room3: 0 };
