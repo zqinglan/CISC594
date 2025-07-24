@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Room Listings | UniRoomie</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Header -->
+  <header class="header bg-white shadow">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <div class="logo flex items-center gap-2">
+        <i class="fas fa-home text-indigo-600 text-2xl"></i>
+        <h1 class="text-2xl font-bold text-indigo-600">UniRoomie</h1>
+      </div>
+      <nav class="nav flex gap-6">
+        <a href="roommate-discovery.html" class="text-gray-700 hover:text-indigo-600">Discover</a>
+        <a href="messaging.html" class="text-gray-700 hover:text-indigo-600">Messages</a>
+        <a href="roomlistings.html" class="text-indigo-600 font-semibold border-b-2 border-indigo-600">Rooms</a>
+        <a href="#" class="text-gray-700 hover:text-indigo-600">Profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="container mx-auto p-6">
+      <h2 class="text-xl font-semibold mb-4 text-gray-700">Available Rooms</h2>
+      <div class="mb-6">
+        <input type="text" placeholder="Search by location, budget, etc..."
+          class="w-full max-w-lg px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+      </div>
+      <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Room Card -->
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+          <!-- <img src="https://source.unsplash.com/400x250/?room" alt="Room Image" class="w-full h-48 object-cover" /> -->
+          <!-- Carousel for Room Card -->
+            <div class="relative">
+                <img id="room1-img" src="room1.jpg" alt="Room Image" class="w-full h-48 object-cover rounded-t-2xl" />
+                <button onclick="prevImage('room1')"
+                    class="absolute left-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow hover:bg-opacity-100">
+                    <i class="fas fa-chevron-left text-indigo-600"></i>
+                </button>
+                <button onclick="nextImage('room1')"
+                    class="absolute right-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow hover:bg-opacity-100">
+                    <i class="fas fa-chevron-right text-indigo-600"></i>
+                </button>
+            </div>
+          <div class="p-4">
+            <h3 class="text-lg font-bold text-gray-800">Downtown Apartment</h3>
+            <p class="text-gray-600 text-sm mt-1">New York City, NY</p>
+            <p class="text-indigo-500 font-semibold mt-2">$850/month · 2 Roommates</p>
+            <p class="text-sm text-gray-500 mt-2">Cozy 2BHK near subway station, available from Aug 1.</p>
+            <button class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg">
+              View Details
+            </button>
+          </div>
+        </div>
+        <!-- Another Room Card -->
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+            <div class="relative">
+                <img id="room2-img" src="room5.jpg" alt="Room Image" class="w-full h-48 object-cover rounded-t-2xl" />
+                <button onclick="prevImage('room2')"
+                class="absolute left-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow hover:bg-opacity-100">
+                <i class="fas fa-chevron-left text-indigo-600"></i>
+                </button>
+                <button onclick="nextImage('room2')"
+                class="absolute right-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow hover:bg-opacity-100">
+                <i class="fas fa-chevron-right text-indigo-600"></i>
+                </button>
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-bold text-gray-800">Shared Loft</h3>
+                <p class="text-gray-600 text-sm mt-1">Philadelphia, PA</p>
+                <p class="text-indigo-500 font-semibold mt-2">$600/month · 1 Roommate</p>
+                <p class="text-sm text-gray-500 mt-2">Spacious room in university district, utilities included.</p>
+                <button class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg">
+                View Details
+                </button>
+            </div>
+        </div>
+        <!-- Another Room Card -->
+         <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+            <div class="relative">
+                <img id="room3-img" src="room9.jpg" alt="Room Image" class="w-full h-48 object-cover rounded-t-2xl" />
+                <button onclick="prevImage('room3')"
+                class="absolute left-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow hover:bg-opacity-100">
+                <i class="fas fa-chevron-left text-indigo-600"></i>
+                </button>
+                <button onclick="nextImage('room3')"
+                class="absolute right-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow hover:bg-opacity-100">
+                <i class="fas fa-chevron-right text-indigo-600"></i>
+                </button>
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-bold text-gray-800">Sunny Studio</h3>
+                <p class="text-gray-600 text-sm mt-1">Boston, MA</p>
+                <p class="text-indigo-500 font-semibold mt-2">$950/month · Studio</p>
+                <p class="text-sm text-gray-500 mt-2">Bright studio apartment close to campus, utilities and WiFi included.</p>
+                <button class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg">
+                    View Details
+            </div>
+        <!-- Add more cards as needed -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white text-center text-sm text-gray-500 p-6 shadow mt-8">
+    © 2025 UniRoomie. All rights reserved.
+  </footer>
+</body>
+</html>
+
+<script>
+// Carousel images for each room
+const roomImages = {
+  room1: [
+    "room1.jpg",
+    "room2.jpg",
+    "room3.jpg",
+    "room4.jpg",
+  ],
+  room2: [
+    "room5.jpg",
+    "room6.jpg",
+    "room7.jpg",
+    "room8.jpg",
+  ],
+  room3: [
+    "room9.jpg",
+    "room10.jpg",
+    "room11.jpg",
+    "room12.jpg",
+],
+};
+const roomIndexes = { room1: 0, room2: 0, room3: 0 };
+
+function showImage(room) {
+  document.getElementById(`${room}-img`).src = roomImages[room][roomIndexes[room]];
+}
+function prevImage(room) {
+  roomIndexes[room] = (roomIndexes[room] - 1 + roomImages[room].length) % roomImages[room].length;
+  showImage(room);
+}
+function nextImage(room) {
+  roomIndexes[room] = (roomIndexes[room] + 1) % roomImages[room].length;
+  showImage(room);
+}
+</script>
