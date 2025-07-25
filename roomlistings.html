@@ -32,12 +32,18 @@
     <div class="container mx-auto p-6">
       <h2 class="text-xl font-semibold mb-4 text-gray-700">Available Rooms</h2>
       <div class="mb-6">
-        <input type="text" placeholder="Search by location, budget, etc..."
+        <input type="text" id="searchInput" placeholder="Search by location, budget, etc..."
           class="w-full max-w-lg px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400" />
       </div>
-      <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="bg-white rounded-2xl shadow-md p-6 mb-8 max-w-xl mx-auto flex flex-col items-center">
+        <h3 class="text-lg font-bold text-gray-800 mb-4">Want to post a room vacancy?</h3>
+        <a href="postVacancy.html" class="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg text-center">
+          Go to Post Vacancy Page
+        </a>
+      </div>
+      <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" id="roomCards">
         <!-- Room Card -->
-        <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden room-card">
           <!-- <img src="https://source.unsplash.com/400x250/?room" alt="Room Image" class="w-full h-48 object-cover" /> -->
           <!-- Carousel for Room Card -->
             <div class="relative">
@@ -56,13 +62,13 @@
             <p class="text-gray-600 text-sm mt-1">New York City, NY</p>
             <p class="text-indigo-500 font-semibold mt-2">$850/month · 2 Roommates</p>
             <p class="text-sm text-gray-500 mt-2">Cozy 2BHK near subway station, available from Aug 1.</p>
-            <button class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg">
+            <!-- <button class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg">
               View Details
-            </button>
+            </button> -->
           </div>
         </div>
         <!-- Another Room Card -->
-        <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden room-card">
             <div class="relative">
                 <img id="room2-img" src="assets/room5.jpg" alt="Room Image" class="w-full h-48 object-cover rounded-t-2xl" />
                 <button onclick="prevImage('room2')"
@@ -79,13 +85,13 @@
                 <p class="text-gray-600 text-sm mt-1">Philadelphia, PA</p>
                 <p class="text-indigo-500 font-semibold mt-2">$600/month · 1 Roommate</p>
                 <p class="text-sm text-gray-500 mt-2">Spacious room in university district, utilities included.</p>
-                <button class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg">
+                <!-- <button class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg">
                 View Details
-                </button>
+                </button> -->
             </div>
         </div>
         <!-- Another Room Card -->
-         <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+         <div class="bg-white rounded-2xl shadow-md overflow-hidden room-card">
             <div class="relative">
                 <img id="room3-img" src="assets/room9.jpg" alt="Room Image" class="w-full h-48 object-cover rounded-t-2xl" />
                 <button onclick="prevImage('room3')"
@@ -102,8 +108,9 @@
                 <p class="text-gray-600 text-sm mt-1">Boston, MA</p>
                 <p class="text-indigo-500 font-semibold mt-2">$950/month · Studio</p>
                 <p class="text-sm text-gray-500 mt-2">Bright studio apartment close to campus, utilities and WiFi included.</p>
-                <button class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg">
+                <!-- <button class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg">
                     View Details
+                </button> -->
             </div>
         <!-- Add more cards as needed -->
       </div>
@@ -111,9 +118,9 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-white text-center text-sm text-gray-500 p-6 shadow mt-8">
+  <!-- <footer class="bg-white text-center text-sm text-gray-500 p-6 shadow mt-8">
     © 2025 UniRoomie. All rights reserved.
-  </footer>
+  </footer> -->
 </body>
 </html>
 
@@ -152,4 +159,12 @@ function nextImage(room) {
   roomIndexes[room] = (roomIndexes[room] + 1) % roomImages[room].length;
   showImage(room);
 }
+document.getElementById('searchInput').addEventListener('input', function() {
+  const query = this.value.toLowerCase();
+  const cards = document.querySelectorAll('.room-card');
+  cards.forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(query) ? '' : 'none';
+  });
+});
 </script>
