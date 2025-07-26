@@ -112,6 +112,88 @@
                     View Details
                 </button> -->
             </div>
+         </div>
+         <!-- Add these inside your <div id="roomCards">, after the existing cards -->
+
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden room-card">
+          <div class="relative">
+            <img id="room4-img" src="assets/room13.jpg" alt="Room Image" class="w-full h-48 object-cover rounded-t-2xl" />
+            <button onclick="prevImage('room4')"
+              class="absolute left-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow hover:bg-opacity-100">
+              <i class="fas fa-chevron-left text-indigo-600"></i>
+            </button>
+            <button onclick="nextImage('room4')"
+              class="absolute right-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow hover:bg-opacity-100">
+              <i class="fas fa-chevron-right text-indigo-600"></i>
+            </button>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-bold text-gray-800">Lakeview Condo</h3>
+            <p class="text-gray-600 text-sm mt-1">Chicago, IL</p>
+            <p class="text-indigo-500 font-semibold mt-2">$1,200/month · 1 Roommate</p>
+            <p class="text-sm text-gray-500 mt-2">Modern condo with lake views, gym access, and close to public transport.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden room-card">
+          <div class="relative">
+            <img id="room5-img" src="assets/room14.jpg" alt="Room Image" class="w-full h-48 object-cover rounded-t-2xl" />
+            <button onclick="prevImage('room5')"
+              class="absolute left-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow hover:bg-opacity-100">
+              <i class="fas fa-chevron-left text-indigo-600"></i>
+            </button>
+            <button onclick="nextImage('room5')"
+              class="absolute right-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow hover:bg-opacity-100">
+              <i class="fas fa-chevron-right text-indigo-600"></i>
+            </button>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-bold text-gray-800">Uptown Flat</h3>
+            <p class="text-gray-600 text-sm mt-1">San Francisco, CA</p>
+            <p class="text-indigo-500 font-semibold mt-2">$1,800/month · 2 Roommates</p>
+            <p class="text-sm text-gray-500 mt-2">Bright flat in uptown, walkable to cafes and tech offices, pet friendly.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden room-card">
+          <div class="relative">
+            <img id="room6-img" src="assets/room15.jpg" alt="Room Image" class="w-full h-48 object-cover rounded-t-2xl" />
+            <button onclick="prevImage('room6')"
+              class="absolute left-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow hover:bg-opacity-100">
+              <i class="fas fa-chevron-left text-indigo-600"></i>
+            </button>
+            <button onclick="nextImage('room6')"
+              class="absolute right-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow hover:bg-opacity-100">
+              <i class="fas fa-chevron-right text-indigo-600"></i>
+            </button>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-bold text-gray-800">Suburban House</h3>
+            <p class="text-gray-600 text-sm mt-1">Austin, TX</p>
+            <p class="text-indigo-500 font-semibold mt-2">$700/month · 3 Roommates</p>
+            <p class="text-sm text-gray-500 mt-2">Spacious house in quiet suburb, large backyard, ideal for students.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden room-card">
+          <div class="relative">
+            <img id="room7-img" src="assets/room16.jpg" alt="Room Image" class="w-full h-48 object-cover rounded-t-2xl" />
+            <button onclick="prevImage('room7')"
+              class="absolute left-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow hover:bg-opacity-100">
+              <i class="fas fa-chevron-left text-indigo-600"></i>
+            </button>
+            <button onclick="nextImage('room7')"
+              class="absolute right-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow hover:bg-opacity-100">
+              <i class="fas fa-chevron-right text-indigo-600"></i>
+            </button>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-bold text-gray-800">City Center Studio</h3>
+            <p class="text-gray-600 text-sm mt-1">Seattle, WA</p>
+            <p class="text-indigo-500 font-semibold mt-2">$1,100/month · Studio</p>
+            <p class="text-sm text-gray-500 mt-2">Studio in the heart of downtown, walk to university and nightlife.</p>
+          </div>
+        </div>
         <!-- Add more cards as needed -->
       </div>
     </div>
@@ -145,8 +227,30 @@ const roomImages = {
     "assets/room11.jpg",
     "assets/room12.jpg",
 ],
+// ...existing code...
+room4: [
+  "assets/room13.jpg",
+  "assets/room13b.jpg",
+  "assets/room13c.jpg"
+],
+room5: [
+  "assets/room14.jpg",
+  "assets/room14b.jpg",
+  "assets/room14c.jpg"
+],
+room6: [
+  "assets/room15.jpg",
+  "assets/room15b.jpg",
+  "assets/room15c.jpg"
+],
+room7: [
+  "assets/room16.jpg",
+  "assets/room16b.jpg",
+  "assets/room16c.jpg"
+],
+// ...existing code...
 };
-const roomIndexes = { room1: 0, room2: 0, room3: 0 };
+const roomIndexes = { room1: 0, room2: 0, room3: 0, room4: 0, room5: 0, room6: 0, room7: 0 };
 
 function showImage(room) {
   document.getElementById(`${room}-img`).src = roomImages[room][roomIndexes[room]];
