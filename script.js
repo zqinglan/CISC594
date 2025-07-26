@@ -12,7 +12,9 @@ const roommateProfiles = [
         occupation: "Graduate Student",
         university: "State University",
         bio: "Looking for a quiet, studious roommate. I'm usually studying or working on research.",
-        compatibilityScore: 95
+        compatibilityScore: 95,
+        rating: 4.8,
+        reviewCount: 12
     },
     {
         id: 2,
@@ -25,7 +27,9 @@ const roommateProfiles = [
         occupation: "Undergraduate Student",
         university: "State University",
         bio: "Love meeting new people and exploring the city. Looking for someone who's social and fun!",
-        compatibilityScore: 87
+        compatibilityScore: 87,
+        rating: 4.5,
+        reviewCount: 8
     },
     {
         id: 3,
@@ -38,7 +42,9 @@ const roommateProfiles = [
         occupation: "Undergraduate Student",
         university: "Tech Institute",
         bio: "International student looking for friends and a great roommate experience!",
-        compatibilityScore: 84
+        compatibilityScore: 84,
+        rating: 4.2,
+        reviewCount: 15
     },
     {
         id: 4,
@@ -51,7 +57,9 @@ const roommateProfiles = [
         occupation: "Undergraduate Student",
         university: "Medical School",
         bio: "Pre-med student who needs a quiet environment to study. Very organized and clean.",
-        compatibilityScore: 89
+        compatibilityScore: 89,
+        rating: 4.9,
+        reviewCount: 6
     },
     {
         id: 5,
@@ -64,7 +72,9 @@ const roommateProfiles = [
         occupation: "Undergraduate Student",
         university: "Business School",
         bio: "First-year business student who loves meeting new people and exploring the city.",
-        compatibilityScore: 82
+        compatibilityScore: 82,
+        rating: 4.0,
+        reviewCount: 3
     },
     {
         id: 6,
@@ -77,7 +87,9 @@ const roommateProfiles = [
         occupation: "Undergraduate Student",
         university: "Design Institute",
         bio: "Art student who balances creativity with academics. Looking for a supportive roommate.",
-        compatibilityScore: 86
+        compatibilityScore: 86,
+        rating: 4.6,
+        reviewCount: 9
     },
 
     // Budget: $800-1200
@@ -92,7 +104,9 @@ const roommateProfiles = [
         occupation: "Medical Student",
         university: "Medical School",
         bio: "Medical student with long hours. Need a quiet place to study and sleep.",
-        compatibilityScore: 89
+        compatibilityScore: 89,
+        rating: 4.7,
+        reviewCount: 11
     },
     {
         id: 8,
@@ -105,7 +119,9 @@ const roommateProfiles = [
         occupation: "Software Engineer",
         university: "Tech Institute",
         bio: "Work from home most days. Looking for someone respectful and clean.",
-        compatibilityScore: 92
+        compatibilityScore: 92,
+        rating: 4.9,
+        reviewCount: 18
     },
     {
         id: 9,
@@ -118,7 +134,9 @@ const roommateProfiles = [
         occupation: "Graduate Student",
         university: "State University",
         bio: "Graduate student who loves hosting study groups and social events.",
-        compatibilityScore: 88
+        compatibilityScore: 88,
+        rating: 4.4,
+        reviewCount: 14
     },
     {
         id: 10,
@@ -131,7 +149,9 @@ const roommateProfiles = [
         occupation: "Professional",
         university: "Business School",
         bio: "Financial analyst who values peace and quiet. Very organized and respectful.",
-        compatibilityScore: 91
+        compatibilityScore: 91,
+        rating: 4.8,
+        reviewCount: 16
     },
     {
         id: 11,
@@ -144,7 +164,9 @@ const roommateProfiles = [
         occupation: "Graduate Student",
         university: "Design Institute",
         bio: "Design student who balances work and social life. Clean and creative.",
-        compatibilityScore: 87
+        compatibilityScore: 87,
+        rating: 4.3,
+        reviewCount: 7
     },
     {
         id: 12,
@@ -157,7 +179,9 @@ const roommateProfiles = [
         occupation: "Professional",
         university: "State University",
         bio: "Marketing professional who loves networking and socializing. Great cook!",
-        compatibilityScore: 85
+        compatibilityScore: 85,
+        rating: 4.1,
+        reviewCount: 10
     },
 
     // Budget: $1200-1500
@@ -172,7 +196,9 @@ const roommateProfiles = [
         occupation: "Architect",
         university: "Design Institute",
         bio: "Creative professional who works late hours. Need a quiet, respectful roommate.",
-        compatibilityScore: 88
+        compatibilityScore: 88,
+        rating: 4.6,
+        reviewCount: 13
     },
     {
         id: 14,
@@ -185,7 +211,9 @@ const roommateProfiles = [
         occupation: "Professional",
         university: "Business School",
         bio: "HR manager who values both work and personal life. Clean and organized.",
-        compatibilityScore: 93
+        compatibilityScore: 93,
+        rating: 4.9,
+        reviewCount: 20
     },
     {
         id: 15,
@@ -198,7 +226,9 @@ const roommateProfiles = [
         occupation: "Graduate Student",
         university: "Medical School",
         bio: "Medical resident who loves to unwind with friends. Looking for a fun roommate.",
-        compatibilityScore: 86
+        compatibilityScore: 86,
+        rating: 4.2,
+        reviewCount: 9
     },
     {
         id: 16,
@@ -211,7 +241,9 @@ const roommateProfiles = [
         occupation: "Professional",
         university: "Tech Institute",
         bio: "Data scientist who works remotely. Need a quiet environment for concentration.",
-        compatibilityScore: 90
+        compatibilityScore: 90,
+        rating: 4.7,
+        reviewCount: 15
     },
     {
         id: 17,
@@ -224,7 +256,9 @@ const roommateProfiles = [
         occupation: "Professional",
         university: "State University",
         bio: "Consultant who travels frequently. Looking for a reliable and clean roommate.",
-        compatibilityScore: 89
+        compatibilityScore: 89,
+        rating: 4.5,
+        reviewCount: 12
     },
     {
         id: 18,
@@ -237,7 +271,9 @@ const roommateProfiles = [
         occupation: "Graduate Student",
         university: "Business School",
         bio: "MBA student who loves networking and social events. Great at organizing!",
-        compatibilityScore: 87
+        compatibilityScore: 87,
+        rating: 4.3,
+        reviewCount: 8
     },
 
     // Budget: $1500+
@@ -252,7 +288,9 @@ const roommateProfiles = [
         occupation: "Marketing Manager",
         university: "Business School",
         bio: "Professional who values both work and social life. Clean and organized.",
-        compatibilityScore: 91
+        compatibilityScore: 91,
+        rating: 4.8,
+        reviewCount: 17
     },
     {
         id: 20,
@@ -265,7 +303,9 @@ const roommateProfiles = [
         occupation: "Professional",
         university: "Tech Institute",
         bio: "Senior developer who works from home. Need a quiet and respectful environment.",
-        compatibilityScore: 94
+        compatibilityScore: 94,
+        rating: 4.9,
+        reviewCount: 22
     },
     {
         id: 21,
@@ -278,7 +318,9 @@ const roommateProfiles = [
         occupation: "Professional",
         university: "Medical School",
         bio: "Physician who loves hosting dinner parties and socializing. Great cook!",
-        compatibilityScore: 88
+        compatibilityScore: 88,
+        rating: 4.4,
+        reviewCount: 11
     },
     {
         id: 22,
@@ -291,7 +333,9 @@ const roommateProfiles = [
         occupation: "Professional",
         university: "Design Institute",
         bio: "Creative director who balances work and personal life. Clean and artistic.",
-        compatibilityScore: 92
+        compatibilityScore: 92,
+        rating: 4.6,
+        reviewCount: 14
     },
     {
         id: 23,
@@ -304,7 +348,9 @@ const roommateProfiles = [
         occupation: "Graduate Student",
         university: "State University",
         bio: "PhD student who needs a quiet environment for research and writing.",
-        compatibilityScore: 89
+        compatibilityScore: 89,
+        rating: 4.7,
+        reviewCount: 16
     },
     {
         id: 24,
@@ -317,7 +363,9 @@ const roommateProfiles = [
         occupation: "Professional",
         university: "Business School",
         bio: "Investment banker who loves networking and social events. Looking for a fun roommate.",
-        compatibilityScore: 86
+        compatibilityScore: 86,
+        rating: 4.1,
+        reviewCount: 9
     },
 
     // Additional profiles for more diversity
@@ -332,7 +380,9 @@ const roommateProfiles = [
         occupation: "Undergraduate Student",
         university: "State University",
         bio: "Freshman student excited to meet new people and have the full college experience!",
-        compatibilityScore: 83
+        compatibilityScore: 83,
+        rating: 4.0,
+        reviewCount: 2
     },
     {
         id: 26,
@@ -345,7 +395,9 @@ const roommateProfiles = [
         occupation: "Professional",
         university: "Tech Institute",
         bio: "Experienced professional who values peace and quiet. Very organized and respectful.",
-        compatibilityScore: 95
+        compatibilityScore: 95,
+        rating: 4.9,
+        reviewCount: 25
     },
     {
         id: 27,
@@ -358,7 +410,9 @@ const roommateProfiles = [
         occupation: "Undergraduate Student",
         university: "Design Institute",
         bio: "Art student who loves creativity and meeting new people. Looking for an open-minded roommate.",
-        compatibilityScore: 84
+        compatibilityScore: 84,
+        rating: 4.2,
+        reviewCount: 5
     },
     {
         id: 28,
@@ -371,14 +425,16 @@ const roommateProfiles = [
         occupation: "Professional",
         university: "Medical School",
         bio: "Healthcare professional who values both work and personal life. Clean and caring.",
-        compatibilityScore: 93
+        compatibilityScore: 93,
+        rating: 4.8,
+        reviewCount: 19
     }
 ];
 
 // Add a profile that matches the most restrictive filter combination for testing
 roommateProfiles.push({
     id: 1001,
-    name: "Test Match",
+    name: "Sophia Rodriguez",
     age: 22,
     gender: "female",
     budget: "1200-1500",
@@ -386,8 +442,27 @@ roommateProfiles.push({
     location: "campus",
     occupation: "Graduate Student",
     university: "Tech Institute",
-    bio: "This is a test profile to ensure filtering always returns a result for the most restrictive combination.",
-    compatibilityScore: 99
+    bio: "Computer science graduate student who loves coding and needs a quiet environment to focus on research projects.",
+    compatibilityScore: 99,
+    rating: 4.9,
+    reviewCount: 10
+});
+
+// Add Li Wang profile that matches the user's specific filter combination
+roommateProfiles.push({
+    id: 1002,
+    name: "Li Wang",
+    age: 28,
+    gender: "female",
+    budget: "500-800",
+    lifestyle: "quiet",
+    location: "campus",
+    occupation: "Graduate Student",
+    university: "Tech Institute",
+    bio: "Computer science graduate student from China. I'm focused on my research and need a quiet, respectful roommate.",
+    compatibilityScore: 100,
+    rating: 5.0,
+    reviewCount: 20
 });
 
 // Global variables
@@ -399,6 +474,7 @@ let currentFilters = {
     location: '',
     occupation: '',
     university: '',
+    rating: '',
     sort: 'compatibility',
     search: ''
 };
@@ -482,55 +558,108 @@ function applyFilters() {
     currentFilters.location = document.getElementById('location').value;
     currentFilters.occupation = document.getElementById('occupation').value;
     currentFilters.university = document.getElementById('university').value;
+    currentFilters.rating = document.getElementById('rating').value;
     currentFilters.sort = document.getElementById('sort').value;
 
     console.log('Current filters:', currentFilters);
     console.log('Total profiles:', roommateProfiles.length);
 
-    // Filter profiles
-    let filteredProfiles = roommateProfiles.filter(profile => {
-        const matchesSearch = currentFilters.search === '' ||
-                              profile.name.toLowerCase().includes(currentFilters.search) ||
-                              profile.occupation.toLowerCase().includes(currentFilters.search) ||
-                              profile.university.toLowerCase().includes(currentFilters.search);
+    // Show ALL profiles but calculate compatibility scores based on filters
+    let allProfiles = roommateProfiles.map(profile => {
+        // Calculate how well each profile matches the current filters
+        let matchScore = 0;
+        let totalPossibleMatches = 0;
 
-        const matchesBudget = currentFilters.budget === '' || profile.budget === currentFilters.budget;
-        const matchesGender = currentFilters.gender === '' || profile.gender === currentFilters.gender;
-        const matchesLifestyle = currentFilters.lifestyle === '' || profile.lifestyle === currentFilters.lifestyle;
-        const matchesLocation = currentFilters.location === '' || profile.location === currentFilters.location;
-        const matchesOccupation = currentFilters.occupation === '' || getOccupationType(profile.occupation) === currentFilters.occupation;
-        const matchesUniversity = currentFilters.university === '' || profile.university === currentFilters.university;
-        const matchesAge = currentFilters.age === '' || isAgeInRange(profile.age, currentFilters.age);
-
-        const matches = matchesSearch && matchesBudget && matchesGender && matchesLifestyle && 
-                       matchesLocation && matchesOccupation && matchesUniversity && matchesAge;
-
-        if (!matches) {
-            console.log(`Profile ${profile.name} filtered out:`, {
-                search: matchesSearch,
-                budget: matchesBudget,
-                gender: matchesGender,
-                lifestyle: matchesLifestyle,
-                location: matchesLocation,
-                occupation: matchesOccupation,
-                university: matchesUniversity,
-                age: matchesAge
-            });
+        // Budget match
+        if (currentFilters.budget) {
+            totalPossibleMatches++;
+            if (profile.budget === currentFilters.budget) {
+                matchScore++;
+            }
         }
 
-        return matches;
+        // Gender match
+        if (currentFilters.gender) {
+            totalPossibleMatches++;
+            if (profile.gender === currentFilters.gender) {
+                matchScore++;
+            }
+        }
+
+        // Lifestyle match
+        if (currentFilters.lifestyle) {
+            totalPossibleMatches++;
+            if (profile.lifestyle === currentFilters.lifestyle) {
+                matchScore++;
+            }
+        }
+
+        // Location match
+        if (currentFilters.location) {
+            totalPossibleMatches++;
+            if (profile.location === currentFilters.location) {
+                matchScore++;
+            }
+        }
+
+        // Occupation match
+        if (currentFilters.occupation) {
+            totalPossibleMatches++;
+            if (getOccupationType(profile.occupation) === currentFilters.occupation) {
+                matchScore++;
+            }
+        }
+
+        // University match
+        if (currentFilters.university) {
+            totalPossibleMatches++;
+            if (profile.university === currentFilters.university) {
+                matchScore++;
+            }
+        }
+
+        // Age match
+        if (currentFilters.age) {
+            totalPossibleMatches++;
+            if (isAgeInRange(profile.age, currentFilters.age)) {
+                matchScore++;
+            }
+        }
+
+        // Rating match
+        if (currentFilters.rating) {
+            totalPossibleMatches++;
+            if (profile.rating >= parseFloat(currentFilters.rating)) {
+                matchScore++;
+            }
+        }
+
+        // Calculate compatibility percentage
+        const compatibilityPercentage = totalPossibleMatches > 0 ? 
+            Math.round((matchScore / totalPossibleMatches) * 100) : 100;
+
+        return {
+            ...profile,
+            compatibilityScore: compatibilityPercentage
+        };
     });
 
-    console.log('Filtered profiles:', filteredProfiles.length);
+    // Apply search filter if there's a search term
+    if (currentFilters.search) {
+        allProfiles = allProfiles.filter(profile => {
+            return profile.name.toLowerCase().includes(currentFilters.search) ||
+                   profile.occupation.toLowerCase().includes(currentFilters.search) ||
+                   profile.university.toLowerCase().includes(currentFilters.search);
+        });
+    }
 
-    // Sort profiles
-    filteredProfiles = sortProfiles(filteredProfiles, currentFilters.sort);
+    console.log('Profiles after search filter:', allProfiles.length);
 
-    // Update compatibility scores based on filters
-    filteredProfiles = calculateCompatibilityScores(filteredProfiles);
+    // Sort profiles by the selected criteria
+    allProfiles = sortProfiles(allProfiles, currentFilters.sort);
 
-    // Display filtered profiles
-    displayProfiles(filteredProfiles);
+    // Display all profiles
+    displayProfiles(allProfiles);
 }
 
 function clearFilters() {
@@ -542,6 +671,7 @@ function clearFilters() {
     document.getElementById('location').value = '';
     document.getElementById('occupation').value = '';
     document.getElementById('university').value = '';
+    document.getElementById('rating').value = '';
     document.getElementById('sort').value = 'compatibility';
     searchInput.value = ''; // Clear search input
     currentFilters.search = ''; // Clear search term
@@ -556,6 +686,7 @@ function clearFilters() {
         location: '',
         occupation: '',
         university: '',
+        rating: '',
         sort: 'compatibility',
         search: ''
     };
@@ -592,6 +723,8 @@ function sortProfiles(profiles, sortBy) {
                 return a.age - b.age;
             case 'name':
                 return a.name.localeCompare(b.name);
+            case 'rating':
+                return b.rating - a.rating;
             default:
                 return 0;
         }
@@ -629,54 +762,6 @@ function getOccupationType(occupation) {
     }
 }
 
-// Calculate compatibility scores based on current filters
-function calculateCompatibilityScores(profiles) {
-    return profiles.map(profile => {
-        let score = 70; // Base score
-
-        // Budget compatibility
-        if (currentFilters.budget && profile.budget === currentFilters.budget) {
-            score += 15;
-        }
-
-        // Lifestyle compatibility
-        if (currentFilters.lifestyle && profile.lifestyle === currentFilters.lifestyle) {
-            score += 10;
-        }
-
-        // Location compatibility
-        if (currentFilters.location && profile.location === currentFilters.location) {
-            score += 5;
-        }
-
-        // Age compatibility (prefer similar age ranges)
-        if (currentFilters.age && isAgeInRange(profile.age, currentFilters.age)) {
-            score += 10;
-        }
-
-        // Occupation compatibility
-        if (currentFilters.occupation && getOccupationType(profile.occupation) === currentFilters.occupation) {
-            score += 8;
-        }
-
-        // University compatibility
-        if (currentFilters.university && profile.university === currentFilters.university) {
-            score += 7;
-        }
-
-        // Add some randomness for realistic scores
-        score += Math.floor(Math.random() * 10);
-
-        // Ensure score doesn't exceed 100
-        score = Math.min(score, 100);
-
-        return {
-            ...profile,
-            compatibilityScore: score
-        };
-    });
-}
-
 // Display profiles in the container
 function displayProfiles(profiles) {
     const resultsCount = document.getElementById('resultsCount');
@@ -711,6 +796,9 @@ function displayProfiles(profiles) {
 function createProfileCard(profile) {
     const viewClass = currentView === 'list' ? 'list-view' : '';
 
+    // Create star rating display
+    const stars = createStarRating(profile.rating);
+
     return `
         <div class="profile-card ${viewClass}" data-id="${profile.id}">
             <div class="profile-header">
@@ -721,6 +809,10 @@ function createProfileCard(profile) {
                     <h4>${profile.name}</h4>
                     <p class="occupation">${profile.occupation}</p>
                     <p class="university">${profile.university}</p>
+                    <div class="rating-display">
+                        ${stars}
+                        <span class="rating-text">${profile.rating} (${profile.reviewCount} reviews)</span>
+                    </div>
                 </div>
                 <div class="compatibility-score">
                     <span class="score-number">${profile.compatibilityScore}%</span>
@@ -758,9 +850,38 @@ function createProfileCard(profile) {
                 <button class="btn-secondary btn-contact" onclick="contactRoommate(${profile.id})">
                     <i class="fas fa-envelope"></i> Contact
                 </button>
+                <button class="btn-secondary btn-rate" onclick="rateProfile(${profile.id})">
+                    <i class="fas fa-star"></i> Rate
+                </button>
             </div>
         </div>
     `;
+}
+
+// Create star rating display
+function createStarRating(rating) {
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
+    const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+    
+    let starsHTML = '';
+    
+    // Full stars
+    for (let i = 0; i < fullStars; i++) {
+        starsHTML += '<i class="fas fa-star star-filled"></i>';
+    }
+    
+    // Half star
+    if (hasHalfStar) {
+        starsHTML += '<i class="fas fa-star-half-alt star-half"></i>';
+    }
+    
+    // Empty stars
+    for (let i = 0; i < emptyStars; i++) {
+        starsHTML += '<i class="far fa-star star-empty"></i>';
+    }
+    
+    return starsHTML;
 }
 
 // Get human-readable lifestyle label
@@ -815,6 +936,43 @@ function viewProfile(profileId) {
     if (profile) {
         alert(`Viewing profile for ${profile.name}\n\nThis would open a detailed profile view with more information about ${profile.name}, including their bio: "${profile.bio}"`);
     }
+}
+
+// Rate a profile
+function rateProfile(profileId) {
+    const profile = roommateProfiles.find(p => p.id === profileId);
+    if (!profile) return;
+
+    // Create rating modal
+    const rating = prompt(`Rate ${profile.name} from 1-5 stars (enter a number):`);
+    
+    if (rating === null) return; // User cancelled
+    
+    const numRating = parseFloat(rating);
+    
+    if (isNaN(numRating) || numRating < 1 || numRating > 5) {
+        alert('Please enter a valid rating between 1 and 5.');
+        return;
+    }
+
+    // Update the profile's rating
+    const oldRating = profile.rating;
+    const oldReviewCount = profile.reviewCount;
+    
+    // Calculate new average rating
+    const totalRating = (oldRating * oldReviewCount) + numRating;
+    const newReviewCount = oldReviewCount + 1;
+    const newRating = totalRating / newReviewCount;
+    
+    // Update profile
+    profile.rating = Math.round(newRating * 10) / 10; // Round to 1 decimal place
+    profile.reviewCount = newReviewCount;
+    
+    // Show success message
+    alert(`Thank you! You rated ${profile.name} ${numRating} stars.\nNew average rating: ${profile.rating} (${newReviewCount} reviews)`);
+    
+    // Refresh the display
+    applyFilters();
 }
 
 // Contact roommate - redirect to messaging page

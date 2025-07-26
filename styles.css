@@ -725,3 +725,72 @@ a:focus {
     font-size: 1.5rem;
     font-weight: 600;
 }
+
+/* Ensure profiles grid displays all cards responsively */
+.profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.profile-card {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* Rating Display */
+.rating-display {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.rating-display i {
+    font-size: 0.8rem;
+}
+
+.star-filled {
+    color: #fbbf24;
+}
+
+.star-half {
+    color: #fbbf24;
+}
+
+.star-empty {
+    color: #d1d5db;
+}
+
+.rating-text {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Rate Button */
+.btn-rate {
+    background: #fbbf24;
+    color: white;
+    border-color: #fbbf24;
+}
+
+.btn-rate:hover {
+    background: #f59e0b;
+    border-color: #f59e0b;
+}
+
+/* Profile Actions - 3 buttons */
+.profile-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.profile-actions .btn-secondary {
+    flex: 1;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
