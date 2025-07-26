@@ -486,19 +486,110 @@ let listViewBtn;
 let searchInput;
 let clearSearchBtn;
 
-// Test function to show all profiles (for debugging)
+// Test function to show all profiles without filters
 function showAllProfiles() {
     console.log('Showing all profiles without filters');
     displayProfiles(roommateProfiles);
 }
 
+// Test rating system
+function testRatingSystem() {
+    console.log('Testing rating system...');
+    const testProfile = roommateProfiles.find(p => p.name === "Li Wang");
+    if (testProfile) {
+        console.log('Li Wang current rating:', testProfile.rating, 'reviews:', testProfile.reviewCount);
+    }
+}
+
 // Add test button to page (for debugging)
 function addTestButton() {
+    // Create container for test buttons
+    const testContainer = document.createElement('div');
+    testContainer.id = 'test-buttons-container';
+    testContainer.style.cssText = `
+        position: fixed; 
+        bottom: 20px; 
+        right: 20px; 
+        z-index: 1000; 
+        display: flex; 
+        flex-direction: column; 
+        gap: 10px;
+        background: rgba(0,0,0,0.8);
+        padding: 10px;
+        border-radius: 8px;
+        backdrop-filter: blur(5px);
+    `;
+
+    // Add toggle button
+    const toggleButton = document.createElement('button');
+    toggleButton.textContent = '🔧 Debug Tools';
+    toggleButton.style.cssText = `
+        background: #6366f1; 
+        color: white; 
+        padding: 8px 12px; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 500;
+    `;
+    toggleButton.onclick = toggleTestButtons;
+    testContainer.appendChild(toggleButton);
+
+    // Add test buttons
     const testButton = document.createElement('button');
     testButton.textContent = 'Test: Show All Profiles';
-    testButton.style.cssText = 'position: fixed; top: 10px; right: 10px; z-index: 1000; background: red; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer;';
+    testButton.style.cssText = `
+        background: #ef4444; 
+        color: white; 
+        padding: 8px 12px; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 500;
+    `;
     testButton.onclick = showAllProfiles;
-    document.body.appendChild(testButton);
+    testContainer.appendChild(testButton);
+
+    // Add rating test button
+    const ratingTestButton = document.createElement('button');
+    ratingTestButton.textContent = 'Test: Rating System';
+    ratingTestButton.style.cssText = `
+        background: #f97316; 
+        color: white; 
+        padding: 8px 12px; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 500;
+    `;
+    ratingTestButton.onclick = testRatingSystem;
+    testContainer.appendChild(ratingTestButton);
+
+    // Initially hide the test buttons
+    const testButtons = testContainer.querySelectorAll('button:not(:first-child)');
+    testButtons.forEach(btn => {
+        btn.style.display = 'none';
+    });
+
+    document.body.appendChild(testContainer);
+}
+
+// Toggle test buttons visibility
+function toggleTestButtons() {
+    const container = document.getElementById('test-buttons-container');
+    const testButtons = container.querySelectorAll('button:not(:first-child)');
+    const toggleButton = container.querySelector('button:first-child');
+    
+    const isVisible = testButtons[0].style.display !== 'none';
+    
+    testButtons.forEach(btn => {
+        btn.style.display = isVisible ? 'none' : 'block';
+    });
+    
+    toggleButton.textContent = isVisible ? '🔧 Debug Tools' : '❌ Hide Debug';
 }
 
 // Initialize the application
