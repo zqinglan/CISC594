@@ -180,6 +180,50 @@
     <script src="config.js"></script>
     <script src="utils.js"></script>
     <script src="script.js"></script>
+
+    <!-- Firebase and Firestore integration -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+      import { getFirestore, collection, setDoc, doc, getDocs } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyA_24ou9Dd6EJJzPFpLSS-S82tNwk_RXcI",
+        authDomain: "uniroomie-faaf3.firebaseapp.com",
+        projectId: "uniroomie-faaf3",
+        storageBucket: "uniroomie-faaf3.firebasestorage.app",
+        messagingSenderId: "52368155973",
+        appId: "1:52368155973:web:b72b08365ff8c08fa6ca2c",
+        measurementId: "G-05S9C2Y7K2"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      // Upload all profiles to Firestore (run ONCE, then comment out)
+      window.uploadAllProfiles = async function() {
+        for (const profile of window.roommateProfiles) {
+          await setDoc(doc(db, "profiles", String(profile.id)), profile);
+          console.log(`Uploaded profile: ${profile.name}`);
+        }
+        alert("All profiles uploaded to Firestore!");
+      };
+      // Uncomment the next line and open the browser console to run it ONCE:
+      uploadAllProfiles();
+
+      // Load all profiles from Firestore and replace roommateProfiles
+      window.loadProfilesFromFirestore = async function() {
+        const querySnapshot = await getDocs(collection(db, "profiles"));
+        window.roommateProfiles = [];
+        querySnapshot.forEach((doc) => {
+          window.roommateProfiles.push(doc.data());
+        });
+        if (window.applyFilters) window.applyFilters();
+      };
+      // Call this on page load to use Firestore data:
+      loadProfilesFromFirestore();
+    </script>
 </body>
 
 </html>
