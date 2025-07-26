@@ -30,6 +30,18 @@
         <div class="container">
             <section class="filters-section">
                 <h2>Find Your Perfect Roommate</h2>
+                
+                <!-- Search Bar -->
+                <div class="search-section">
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="searchInput" placeholder="Search by name, occupation, or university..." class="search-input">
+                        <button id="clearSearch" class="clear-search" style="display: none;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                
                 <div class="filters">
                     <div class="filter-group">
                         <label for="budget">Budget Range</label>
@@ -84,36 +96,70 @@
                     </div>
 
                     <div class="filter-group">
+                        <label for="occupation">Occupation</label>
+                        <select id="occupation">
+                            <option value="">Any Occupation</option>
+                            <option value="student">Student</option>
+                            <option value="professional">Professional</option>
+                            <option value="graduate">Graduate Student</option>
+                            <option value="undergraduate">Undergraduate Student</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="university">University</label>
+                        <select id="university">
+                            <option value="">Any University</option>
+                            <option value="State University">State University</option>
+                            <option value="Tech Institute">Tech Institute</option>
+                            <option value="Medical School">Medical School</option>
+                            <option value="Business School">Business School</option>
+                            <option value="Design Institute">Design Institute</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
                         <label for="sort">Sort By</label>
                         <select id="sort">
                             <option value="compatibility">Compatibility Score</option>
                             <option value="budget">Budget (Low to High)</option>
                             <option value="age">Age</option>
+                            <option value="name">Name (A-Z)</option>
                         </select>
                     </div>
                 </div>
 
-                <button id="applyFilters" class="btn-primary">
-                    <i class="fas fa-search"></i>
-                    Apply Filters
-                </button>
+                <div class="filter-actions">
+                    <button id="applyFilters" class="btn-primary">
+                        <i class="fas fa-search"></i>
+                        Apply Filters
+                    </button>
+                    <button id="clearFilters" class="btn-secondary">
+                        <i class="fas fa-times"></i>
+                        Clear All
+                    </button>
+                </div>
             </section>
 
+            <!-- Results Section -->
             <section class="results-section">
                 <div class="results-header">
-                    <h3>Roommate Profiles</h3>
+                    <div class="results-info">
+                        <h3>Roommate Profiles</h3>
+                        <span id="resultsCount" class="results-count">Showing all profiles</span>
+                    </div>
                     <div class="view-toggle">
-                        <button id="gridView" class="view-btn active">
+                        <button id="gridViewBtn" class="view-btn active" title="Grid View">
                             <i class="fas fa-th"></i>
                         </button>
-                        <button id="listView" class="view-btn">
+                        <button id="listViewBtn" class="view-btn" title="List View">
                             <i class="fas fa-list"></i>
                         </button>
                     </div>
                 </div>
 
                 <div id="profilesContainer" class="profiles-grid">
-                    <!-- Profiles will be dynamically loaded here -->
+                    <!-- Profiles will be loaded here -->
                 </div>
             </section>
         </div>
